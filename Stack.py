@@ -5,12 +5,14 @@ class stack:
         self.top = -1
 
     def push(self,value):
+        if self.top == 2 :
+            print("Sorry stack is full")
         self.top +=1
         self.stack.append(value)
 
     def pop(self):
         if self.top == -1 :
-            print("Stack is empty")
+            print("Sorry stack is empty")
         self.top -=1
         self.stack.pop()
 
@@ -25,7 +27,7 @@ s = stack()
 s.push(50)
 s.push(67)
 s.push(2)
-s.push(100)
+s.push(10)
 
 
 s.print_stack()
